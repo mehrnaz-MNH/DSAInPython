@@ -37,6 +37,7 @@ class DoublyLinkedList:
     #                                 #
     ###################################
     def is_palindrome(self):
+        # two pointers iteration 
         if self.length <= 1:
             return True
 
