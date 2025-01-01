@@ -82,6 +82,70 @@ class BinarySearchTree :
         self.delete_helper(self.root , value)
 
 
+    def BFS(self):
+        c_node = self.root
+        queue = []
+        results = []
+        queue.append(c_node)
+        while len(queue) > 0 :
+            c_node = queue.pop(0)
+            results.append(c_node.value)
+            if c_node.left is not None :
+                queue.append(c_node.left)
+
+            if c_node.right is not None :
+                queue.append(c_node.right)
+
+        return results
+
+    def dfs_pre_order(self):
+        results = []
+        def traverse(c_node):
+            results.append(c_node.value)
+            if c_node.left is not None :
+                traverse(c_node.left)
+            if c_node.right is not None :
+                traverse(c_node.right)
+
+        traverse(self.root)
+        return results
+
+    def dfs_post_order(self):
+        results = []
+        def traverse(c_node):
+            if c_node.left is not None :
+                traverse(c_node.left)
+            if c_node.right is not None :
+                traverse(c_node.right)
+            results.append(c_node.value)
+
+        traverse(self.root)
+        return results
+
+    def dfs_in_order(self):
+        results = []
+
+        def traverse(c_node):
+            if c_node.left is not None:
+                traverse(c_node.left)
+            results.append(c_node.value)
+            if c_node.right is not None:
+                traverse(c_node.right)
+
+
+        traverse(self.root)
+        return results
+
+
+
+
+
+
+
+
+
+
+
 
 
 
