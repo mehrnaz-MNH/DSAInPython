@@ -1,0 +1,7 @@
+used when overlapping sub problems  - repeating sub problem
+storing answer of repeating problems = Memoization
+optimized substructure = you have to have optimal solution to the sub
+problem to have an overall optimal answer to the overall problem
+
+Top down ( recursion )
+Bottom Up ---------------->
